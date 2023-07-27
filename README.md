@@ -17,7 +17,11 @@ podman build -t ubuntusshd .
 
 次のコマンドでコンテナを起動
 
-podman run -d --name ubuntusshd -p XXXXX:22 -p YYYYY:25565 ubuntusshd
+screen -S ubuntusshd
+
+podman run --name ubuntusshd -p XXXXX:22 -p YYYYY:25565 ubuntusshd
+
+Ctrl+A、Dでscreenをデタッチする
 
 何か失敗したら「podman rm -f ubuntusshd」でコンテナを削除して
 
