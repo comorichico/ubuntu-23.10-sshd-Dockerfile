@@ -1,6 +1,6 @@
 FROM ubuntu:23.10
 
-RUN apt update && apt install -y openssh-server iproute2 openjdk-17-jre nano sudo
+RUN apt update && apt install -y openssh-server openjdk-22-jre nano screen sudo
 RUN echo 'root:kokonipassword' | chpasswd
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin no/' /etc/ssh/sshd_config
 
